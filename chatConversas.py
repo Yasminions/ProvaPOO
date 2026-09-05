@@ -1,0 +1,1 @@
+listaDeConversas = ["Annaly", "Yasmin", "Larissa", "Júlia", "Daniela", "Assistente PenhaS"]

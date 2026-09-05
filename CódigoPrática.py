@@ -3,6 +3,9 @@
 #Se você notar outro colaborador, pode ficar tranquila que esse código foi feito apenas pela Yasmin(eu) e essa outra conta é de um parente que deixou eu usar o computador pra poder fazer o código, então não se preocupe, o código é meu e de mais ninguém.
 
 #Essa é a classe Cadastro, esses abaixo são os atributos e metodos da classe, a qual tem relação de herança com a classe Usuário aonde a classe usuário herda de Cadastro, pois o atributo informações pessoais (de usuário) tem todas os atributos da classe Cadastro.
+
+from chatConversas import *
+
 class Cadastro:
     def __init__(self, nome: str, email: str, senha: str, cep: int, cpf: int, apelido: str, genero: bool, raca: bool, data_de_nascimento: int, questionario: bool):
         self._nome = nome
@@ -62,6 +65,32 @@ class PontosDeApoio:
             print("Lista de pontos com filtros aplicados:")
 
         def pesquisar_por_endereco(self, string):
-            print("Lista de resultados:")
+            print("Lista de resultados com filtros aplicados:")
+
+class Chat:
+    def __init__ (self, todasUsuarias, assistentePenhaS):
+        self.__todasUsuarias = todasUsuarias
+        self.__assistentePenhaS = assistentePenhaS
+
+        def enviar_mensagem(self, string):
+            print("Mensagem enviada")
+
+        def receber_mensagem(self, string):
+            print("Mensagem recebida")
+
+        def receber_notificacao(self):
+            pass
+
+        def exibir_conversas(self):
+            print(listaDeConversas)
+
+        def filtrar_usuarias(self, string):
+            print("Lista de usuárias com filtros aplicados:")
+
+        def bloquear_usuaria(self):
+           pass
+
+        def apagar_usuaria(self):
+            pass
 
 #A classe PontosDeApoio tem relação de associação com a classe Usuario.
