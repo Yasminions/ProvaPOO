@@ -1,11 +1,10 @@
-#Este é o código em python, prova prática da matéria de POO com o tema em PenhaS, este código foi baseado em um diagrama de classes feito no Astah e na sala de aula em grupo formado pelas seguintes integrantes: Annaly Lima, Yasmin Almeida, Larissa De Castro e Júlia Do Carmo.
+#Este é o código em python, prova prática da matéria de POO com o tema em PenhaS, este código foi baseado em um diagrama de classes feito no Astah e na sala de aula em grupo formado pelas seguintes integrantes: Annaly Lima, Yasmin Almeida, Larissa De Castro e Júlia Do Carmo Turma: 2ºA ano do ensino médio.
 
 #Se você notar outro colaborador, pode ficar tranquila que esse código foi feito apenas pela Yasmin(eu) e essa outra conta é de um parente que deixou eu usar o computador pra poder fazer o código, então não se preocupe, o código é meu e de mais ninguém.
 
-#Essa é a classe Cadastro, esses abaixo são os atributos e metodos da classe, a qual tem relação de herança com a classe Usuário aonde a classe usuário herda de Cadastro, pois o atributo informações pessoais (de usuário) tem todas os atributos da classe Cadastro.
-
 from chatConversas import *
 
+#Essa é a classe Cadastro, esses abaixo são os atributos e metodos da classe, a qual tem relação de herança com a classe Usuário aonde a classe usuário herda de Cadastro, pois o atributo informações pessoais (de usuário) tem todas os atributos da classe Cadastro.
 class Cadastro:
     def __init__(self, nome: str, email: str, senha: str, cep: int, cpf: int, apelido: str, genero: bool, raca: bool, data_de_nascimento: int, questionario: bool):
         self._nome = nome
@@ -67,6 +66,8 @@ class PontosDeApoio:
         def pesquisar_por_endereco(self, string):
             print("Lista de resultados com filtros aplicados:")
 
+#A classe PontosDeApoio tem relação de associação com a classe Usuario.
+
 class Chat:
     def __init__ (self, todasUsuarias, assistentePenhaS):
         self.__todasUsuarias = todasUsuarias
@@ -81,11 +82,11 @@ class Chat:
         def receber_notificacao(self):
             pass
 
-        def exibir_conversas(self):
+        def exibir_conversas(self, list):
             print(listaDeConversas)
 
-        def filtrar_usuarias(self, string):
-            print("Lista de usuárias com filtros aplicados:")
+        def filtrar_usuarias(self, list):
+            pass
 
         def bloquear_usuaria(self):
            pass
@@ -93,4 +94,35 @@ class Chat:
         def apagar_usuaria(self):
             pass
 
-#A classe PontosDeApoio tem relação de associação com a classe Usuario.
+# Um Usuario possui relacionamento de associação com Chat e de multiplicidade (0..*), o que significa que o usuário pode ter nenhum ou mais de uma conversas com outras usuárias, e o Chat possui relacionamento de associação com Usuario e de multiplicidade (0..*) o que significa que o chat pode ter nenhum ou mais de uma usuárias.
+            
+class PenhaS:
+    def __init__(self,perguntasFrequentes: list, materiaisDivulgacao: str):
+        self.__perguntas_frequentes = perguntasFrequentes
+        self.__materiaisDivulgacao = materiaisDivulgacao
+
+        def acessar_materiais(self, string):
+            pass
+
+        def termos_de_uso(self, string):
+            pass
+
+        def politica_de_privacidade(self, string):
+            pass
+
+#A classe PenhaS tem relação de associação com a classe Usuario.
+
+class ManualDeFuga:
+    def __init__(self, planoDefuga: bool, intensBasicos: bool, passosparaFuga: bool, transporte: bool):
+        self.__planoDefuga = planoDefuga
+        self.__intensBasicos = intensBasicos
+        self.__passosparaFuga = passosparaFuga
+        self.__transporte = transporte
+
+    def criar_plano_de_fuga(self, boolean):
+        pass
+
+    def responder_questionario(self, list):
+        pass
+
+
