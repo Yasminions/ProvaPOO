@@ -1,6 +1,6 @@
-#Este é o código em python, prova prática com o tema em PenhaS, este código foi baseado em um diagrama de classes feito no Astah e em sala de aula por grupo formado pelas seguintes integrantes: Annaly Lima, Yasmin Almeida, Larissa De Castro e Júlia Do Carmo.
+#Este é o código em python, prova prática da matéria de POO com o tema em PenhaS, este código foi baseado em um diagrama de classes feito no Astah e na sala de aula em grupo formado pelas seguintes integrantes: Annaly Lima, Yasmin Almeida, Larissa De Castro e Júlia Do Carmo.
 
-#Essa é a classe Cadastro, esses abaixo são os atributos e metodos da classe, a qual tem relação de herança com a classe Usuário, aonde o atributo informações pessoais (de usuário) tem todas os atributos da classe cadastro.
+#Essa é a classe Cadastro, esses abaixo são os atributos e metodos da classe, a qual tem relação de herança com a classe Usuário aonde a classe usuário herda de Cadastro, pois o atributo informações pessoais (de usuário) tem todas os atributos da classe Cadastro.
 class Cadastro:
     def __init__(self, nome: str, email: str, senha: str, cep: int, cpf: int, apelido: str, genero: bool, raca: bool, data_de_nascimento: int, questionario: bool):
         self._nome = nome
@@ -15,13 +15,13 @@ class Cadastro:
         self._questionario = questionario
         
         def confimar_senha(self, boolean):
-            pass 
+            print("Senha confirmada com sucesso!") 
         
         def responder_questionario(self):
             pass
         
         def ativar_modo_camuflado(self, boolean):
-            pass
+            print("Modo camuflado ativado!")
 
 class Usuario(Cadastro):
     def __init__(self, informacoes_pessoais: str, modoCamuflado: bool, configuracoes: bool, sobre_o_penhaS: str, manualDeFuga: list, chat: int, pontosDeApoio: list):
@@ -32,3 +32,34 @@ class Usuario(Cadastro):
         self._manualDeFuga = manualDeFuga
         self._chat = chat
         self._pontosDeApoio = pontosDeApoio
+
+        def editar_configuracoes(self):
+            pass
+
+        def ativar_modo_camuflado(self, boolean):
+            print("Modo camuflado ativado")
+        #Caso tenha notado, o metodo ativar_modo_camuflado está presente tanto na classe Cadastro quanto na classe Usuario, porque quando você vai criar uma conta, você pode ativar o modo camuflado no meio do processo do cadastro, porém quando você já tem uma conta criada, você também pode ativar e desativar o modo camuflado, então por isso que o metodo está presente nas duas classes só que em locais diferentes, apenas esclarecendo caso tenha estranhado.
+
+        def desativar_modo_camuflado(self, boolean):
+            print("Modo camuflado desativado")
+
+        def excluir_conta(self, boolean):
+            print("Conta excluída com sucesso!")
+            
+        def sair_da_conta(self, boolean):
+            print("Você saiu da conta com sucesso!")
+
+        def editar_informacoes_pessoais(self):
+            pass 
+
+class PontosDeApoio:
+    def __init__(self, locais = str):
+        self.__locais = locais
+
+        def filtrar_pontos(self, string):
+            print("Lista de pontos com filtros aplicados:")
+
+        def pesquisar_por_endereco(self, string):
+            print("Lista de resultados:")
+
+#A classe PontosDeApoio tem relação de associação com a classe Usuario.
