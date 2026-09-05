@@ -1,5 +1,7 @@
 #Este é o código em python, prova prática da matéria de POO com o tema em PenhaS, este código foi baseado em um diagrama de classes feito no Astah e na sala de aula em grupo formado pelas seguintes integrantes: Annaly Lima, Yasmin Almeida, Larissa De Castro e Júlia Do Carmo.
 
+#Se você notar outro colaborador, pode ficar tranquila que esse código foi feito apenas pela Yasmin(eu) e essa outra conta é de um parente que deixou eu usar o computador pra poder fazer o código, então não se preocupe, o código é meu e de mais ninguém.
+
 #Essa é a classe Cadastro, esses abaixo são os atributos e metodos da classe, a qual tem relação de herança com a classe Usuário aonde a classe usuário herda de Cadastro, pois o atributo informações pessoais (de usuário) tem todas os atributos da classe Cadastro.
 class Cadastro:
     def __init__(self, nome: str, email: str, senha: str, cep: int, cpf: int, apelido: str, genero: bool, raca: bool, data_de_nascimento: int, questionario: bool):
