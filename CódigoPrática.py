@@ -42,7 +42,8 @@ class Usuario(Cadastro):
 
         def ativar_modo_camuflado(self, boolean):
             print("Modo camuflado ativado")
-        #Caso tenha notado, o metodo ativar_modo_camuflado está presente tanto na classe Cadastro quanto na classe Usuario, porque quando você vai criar uma conta, você pode ativar o modo camuflado no meio do processo do cadastro, porém quando você já tem uma conta criada, você também pode ativar e desativar o modo camuflado, então por isso que o metodo está presente nas duas classes só que em locais diferentes, apenas esclarecendo caso tenha estranhado.
+
+#Caso tenha notado, o metodo ativar_modo_camuflado está presente tanto na classe Cadastro quanto na classe Usuario, porque quando você vai criar uma conta, você pode ativar o modo camuflado no meio do processo do cadastro, porém quando você já tem uma conta criada, você também pode ativar e desativar o modo camuflado, então por isso que o metodo está presente nas duas classes só que em locais diferentes, apenas esclarecendo caso tenha estranhado.
 
         def desativar_modo_camuflado(self, boolean):
             print("Modo camuflado desativado")
@@ -94,7 +95,7 @@ class Chat:
         def apagar_usuaria(self):
             pass
 
-# Um Usuario possui relacionamento de associação com Chat e de multiplicidade (0..*), o que significa que o usuário pode ter nenhum ou mais de uma conversas com outras usuárias, e o Chat possui relacionamento de associação com Usuario e de multiplicidade (0..*) o que significa que o chat pode ter nenhum ou mais de uma usuárias.
+#Usuario possui relacionamento de associação com Chat e de multiplicidade (0..*), o que significa que o usuário pode ter nenhum ou mais de uma conversas com outras usuárias, e o Chat possui relacionamento de associação com Usuario e de multiplicidade (0..*) o que significa que o chat pode ter nenhum ou mais de uma usuárias.
             
 class PenhaS:
     def __init__(self,perguntasFrequentes: list, materiaisDivulgacao: str):
@@ -139,4 +140,39 @@ class BotaoDePanico:
         def chamar_policia(self):
             pass
 
-#A classe BotaoDePanico tem relação de associação com a classe Usuario, Guardioes e policia, e de multiplicidade (0..*) com a classe Usuario, o que significa que o usuário pode ter nenhum ou mais de um guardião, e de multiplicidade (0..1) com a classe Policia, o que significa que o usuário tem nenhum ou um contato com a policia.
+#A classe BotaoDePanico tem relação de associação com a classe Usuario, Guardioes e policia e de multiplicidade (0..*) com a classe Usuario, o que significa que o usuário pode ter nenhum ou mais de um guardião, e de multiplicidade (0..1) com a classe Policia, o que significa que o usuário tem nenhum ou um contato com a policia. Porém a classe gravações tem uma relação de agregação e multiplicidade 0..*, fazendo com que o usuario tenha mais de um áudio gravado ou nenhum, com o botão de panico,
+
+class Guardioes:
+    def __init__(self, nome: str, telefone: int):
+        self.__nome = nome
+        self.__telefone = telefone
+
+        def receber_alerta(self):
+            pass
+
+        def receber_localizacao(self):
+            pass
+
+        def editar_guardioes(self):
+            pass
+
+class Policia:
+    def __init__(self):
+
+        def receber_localizacao(self):
+            pass
+
+        def receber_alerta(self):
+            pass
+
+        def enviar_viatura(self):
+            pass
+
+class Gravacoes:
+    def __init__(self):
+
+        def gravar_audio(self):
+            pass
+
+        def excluir_audio(self):
+            pass
