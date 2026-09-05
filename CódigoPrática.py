@@ -125,4 +125,18 @@ class ManualDeFuga:
     def responder_questionario(self, list):
         pass
 
+#A classe ManualDeFuga tem relação de associação com a classe Usuario.
+class BotaoDePanico:
+    def __init__(self, guardioes: list, gravacoes: str, policia: int, botaoDePanico: bool):
+        self.__guardioes = guardioes
+        self.__gravacoes = gravacoes
+        self.__policia = policia
+        self.__botaoDePanico = botaoDePanico
 
+        def alertar_guardioes(self, boolean):
+            print("Guardiões alertados")
+
+        def chamar_policia(self):
+            pass
+
+#A classe BotaoDePanico tem relação de associação com a classe Usuario, Guardioes e policia, e de multiplicidade (0..*) com a classe Usuario, o que significa que o usuário pode ter nenhum ou mais de um guardião, e de multiplicidade (0..1) com a classe Policia, o que significa que o usuário tem nenhum ou um contato com a policia.
